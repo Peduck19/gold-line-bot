@@ -17,7 +17,7 @@ def webhook():
     send_line(msg)
     send_line(msg)
 
-    print(message)
+    print(msg)
     print(data)
     return "OK"
 import os
