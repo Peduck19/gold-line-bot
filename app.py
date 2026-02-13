@@ -4,7 +4,7 @@ import os
 
 app = Flask(__name__)
 
-LINE_NOTIFY_TOKEN = "ใส่_tokenจริงของคุณ"
+LINE_NOTIFY_TOKEN = "ใส่โทเคนไลน์ของคุณ"
 
 def send_line(msg):
     url = "https://notify-api.line.me/api/notify"
@@ -12,7 +12,8 @@ def send_line(msg):
         "Authorization": f"Bearer {LINE_NOTIFY_TOKEN}"
     }
     data = {"message": msg}
-    requests.post(url, headers=headers, data=data)
+    requests.post(url, headers=headers, data=data, timeout=10)
+    print("LINE status:", r.status_code, r.text)
 
 @app.route("/", methods=["GET"])
 def home():
