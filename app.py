@@ -11,8 +11,9 @@ GROUP_ID = "ใส่_GROUP_ID"
 def send_line(msg):
     url = "https://api.line.me/v2/bot/message/push"
     headers = {
-        "Authorization": "Bearer " + iSwVH5bbcYAoVCdL4bQp2OJKzxFsuDXICbnLTMw3IRHW/9p/Bbrm4PXjm9h95ngPSL/qxWb3bXOmIjKuXFsD0IfD8JgmgDPvVmEIM7/KEDCZfqaz6leMooVpTnl0C07pALmUtCIpShP5qg0tggBZVAdB04t89/1O/w1cDnyilFU=,
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        "Authorization": "Bearer iSwVH5bbcYAoVCdL4bQp2OJKzxFsuDXICbnLTMw3IRHW/9p/Bbrm4PXjm9h95ngPSL/qxWb3bXOmIjKuXFsD0IfD8JgmgDPvVmEIM7/KEDCZfqaz6leMooVpTnl0C07pALmUtCIpShP5qg0tggBZVAdB04t89/1O/w1cDnyilFU="
+}
     }
     data = {
         "to": GROUP_ID,
