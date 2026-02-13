@@ -13,7 +13,9 @@ def webhook():
     price = float(data.get("price", 0))
     target = float(data.get("target", 0))
 
-    message = f"{symbol} มาถึงราคา {price} ใกล้ถึงจุดเข้าที่ {target} แล้ว"
+    msg = f"ราคามาถึง {price:.0f} เตรียมตัว 🚨🚨"
+    send_line(msg)
+    send_line(msg)
 
     print(message)
     print(data)
